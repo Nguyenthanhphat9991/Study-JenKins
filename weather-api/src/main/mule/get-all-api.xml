@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mule xmlns:ee="http://www.mulesoft.org/schema/mule/ee/core" xmlns:http="http://www.mulesoft.org/schema/mule/http"
+	xmlns="http://www.mulesoft.org/schema/mule/core"
+	xmlns:doc="http://www.mulesoft.org/schema/mule/documentation" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/http/current/mule-http.xsd
+http://www.mulesoft.org/schema/mule/ee/core http://www.mulesoft.org/schema/mule/ee/core/current/mule-ee.xsd">
+	<flow name="get-all-api-mockFlow" doc:id="ef3319ba-10b3-4090-b2a4-c8119c00c657" >
+		<http:listener doc:name="Listener" doc:id="7f018526-3e74-4173-b97a-e5a45a6d71e2" config-ref="HTTP_Listener_config" path="/getAll/v1"/>
+		<http:request method="GET" doc:name="Get ALL API Mock" doc:id="6e4617bf-93a4-48a6-9c79-9b90a0357f25" config-ref="HTTP_Request_configuration" path="/weatherForecasts"/>
+		<ee:transform doc:name="response data" doc:id="cb21fefd-5c78-4834-b4d2-ffcbeea2649b" >
+			<ee:message >
+				<ee:set-payload ><![CDATA[%dw 2.0
+output application/json
+---
+payload]]></ee:set-payload>
+			</ee:message>
+		</ee:transform>
+	</flow>
+</mule>
