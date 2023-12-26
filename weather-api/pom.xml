@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>org.com.weather</groupId>
@@ -58,6 +60,22 @@
 							<format>html</format>
 						</formats>
 					</coverage>
+					<cloudHubDeployment>
+						<username>salyhat</username>
+						<environment>Sandbox</environment>
+						<workers>1</workers>
+						<workerType>Micro</workerType>
+						<applicationName>weather-api-cloudhub</applicationName>
+						<muleVersion>4.5.1</muleVersion>
+						<password>Conmeo@12345678</password>
+
+						<!-- <uri>https://anypoint.mulesoft.com</uri> -->
+						<!-- <region>${region}</region>
+						<properties>
+							<key>value</key>
+						</properties> -->
+
+					</cloudHubDeployment>
 				</configuration>
 			</plugin>
 		</plugins>
