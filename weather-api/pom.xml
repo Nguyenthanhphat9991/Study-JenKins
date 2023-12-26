@@ -37,6 +37,20 @@
 				<extensions>true</extensions>
 				<configuration>
 					<classifier>mule-plugin</classifier>
+					<cloudHubDeployment>
+						<uri>https://anypoint.mulesoft.com</uri>
+						<muleVersion>4.5</muleVersion>
+						<username>salyhat</username>
+						<password>Conmeo@12345678</password>
+						<applicationName>weather-api-cloudhub</applicationName>
+						<environment>Sandbox</environment>
+						<region>${region}</region>
+						<workers>${workers}</workers>
+						<workerType>${workerType}</workerType>
+						<properties>
+							<key>value</key>
+						</properties>
+					</cloudHubDeployment>
 				</configuration>
 			</plugin>
 			<plugin>
@@ -60,21 +74,6 @@
 							<format>html</format>
 						</formats>
 					</coverage>
-					<cloudHubDeployment>
-						<username>salyhat</username>
-						<environment>Sandbox</environment>
-						<workers>1</workers>
-						<workerType>Micro</workerType>
-						<applicationName>weather-api-cloudhub</applicationName>
-						<muleVersion>4.0.0</muleVersion>
-						<password>Conmeo@12345678</password>
-						<!-- <uri>https://anypoint.mulesoft.com</uri> -->
-						<!-- <region>${region}</region>
-						<properties>
-							<key>value</key>
-						</properties> -->
-
-					</cloudHubDeployment>
 				</configuration>
 			</plugin>
 		</plugins>
