@@ -66,9 +66,8 @@
 						<workers>1</workers>
 						<workerType>Micro</workerType>
 						<applicationName>weather-api-cloudhub</applicationName>
-						<muleVersion>4.5.1</muleVersion>
+						<muleVersion>4.0.0</muleVersion>
 						<password>Conmeo@12345678</password>
-
 						<!-- <uri>https://anypoint.mulesoft.com</uri> -->
 						<!-- <region>${region}</region>
 						<properties>
